@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fishpond Monitor</title>
+    <style>
+        body {
+            background-image: url('plants.jpg'); /* Replace with your image file */
+            background-size: cover;
+            left: 0%;
+            right: 0%;
+            font-family: Arial, sans-serif;
+            color: rgb(251, 255, 250);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            text-align: center;
+            padding-top: 50px;
+        }
+        h1 {
+            font-size: 48px; /* Bigger title */
+            margin-bottom: 20px;
+        }
+        .sensor-data {
+            font-size: 36px; /* Bigger sensor data */
+            margin-bottom: 30px;
+        }
+        .warning {
+            font-size: 24px; /* Bigger warning text */
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .warning-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+        .warning-sign {
+            width: 60px; /* Bigger warning sign */
+            height: 60px;
+            margin: 0 30px;
+            border-radius: 50%;
+            background-color: transparent; /* No color */
+            border: 2px solid rgb(82, 253, 15); /* Border color */
+        }
+        .label {
+            font-size: 18px; /* Bigger label text */
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fishpond Monitoring System</h1>
+        <div class="sensor-data">
+            <p>Water Level: <span id="water-level">50%</span></p>
+            <p>Temperature: <span id="temperature">28°C</span></p>
+            <p>pH Level: <span id="ph-level">7.0</span></p>
+        </div>
+        <div class="warning-container">
+            <div class="warning-sign" id="temperature-circle"></div>
+            <p class="warning" id="temperature-warning">Temperature: Normal </p>
+            <div class="warning-sign" id="ph-circle"></div>
+            <p class="warning" id="ph-warning">pH Level: Normal </p>
+            <div class="warning-sign" id="water-level-circle"></div>
+            <p class="warning" id="water-level-warning">Water Level: Normal </p>
+        </div>
+        <div class="label">
+            <span style="color: green;">●</span> Normal><br>
+            <span style="color: yellow;">●</span> Moderate<br>
+            <span style="color: red;">●</span> Critical
+        </div>
+    </div>
+</body>
+</html>
